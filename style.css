@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+.container{
+    /* border: 2px solid black; */
+    height: 100vh;
+    /* background-color: aqua; */
+    
+}
+.card{
+    margin-top: 1em;
+    height: 600px!important;
+}
