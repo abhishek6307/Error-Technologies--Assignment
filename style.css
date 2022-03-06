@@ -16,3 +16,7 @@ body{
     margin-top: 1em;
     height: 600px!important;
 }
+
+#num-imp{
+    display: block;
+}

@@ -26,7 +26,7 @@ $sql1 = "SELECT * FROM data WHERE email='{$_SESSION['email']}' ";
 
      if(isset($_POST["import"])){
          echo mysqli_error();
-         die();
+         die()
          $filname = $_FILES["file"]["tmp_name"];
          if ($_FILES["file"]["size"] > 0) {
              $file = fopen($filname, "r");
@@ -52,7 +52,7 @@ $sql1 = "SELECT * FROM data WHERE email='{$_SESSION['email']}' ";
                
                 $sql= "INSERT INTO data (full_name, email, password,is_admin, created_by) VALUES('".$column[0]."','".$column[1]."','$password',FALSE, '{$_SESSION['user_id']}')";
                 $result = mysqli_query($conn, $sql);
-                // echo ($sql);
+                echo '<script>alert("Welcome to Geeks for Geeks")</script>';
                 
               
              }

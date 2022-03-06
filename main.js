@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
         XHRS.addEventListener("error", on_error);
 
         // Set up request
-        XHRS.open("POST", "import.php");
+        XHRS.open("POST", "submit.php");
         // Form data is sent with request
         XHRS.send(import_data);
 
