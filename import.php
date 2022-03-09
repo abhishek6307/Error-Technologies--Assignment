@@ -37,7 +37,7 @@ $sql1 = "SELECT * FROM data WHERE email='{$_SESSION['email']}' ";
             
             $row_count = mysqli_num_rows($result1);
             if ($row_count == 0) {
-                echo "Login failed! Invalid email or password.";
+                echo "Something went wrong";
                 exit();
             }
 
@@ -53,7 +53,9 @@ $sql1 = "SELECT * FROM data WHERE email='{$_SESSION['email']}' ";
          $filename = $_FILES["file"]["tmp_name"];
          if ($_FILES["file"]["size"] > 0) {
              $file = fopen($filename, "r");
-             function generateRandomString($length = 8) {
+
+
+             function generateRandomString($length = 15) {
                 $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
                 $charactersLength = strlen($characters);
                 $randomString = '';
@@ -83,7 +85,7 @@ $sql1 = "SELECT * FROM data WHERE email='{$_SESSION['email']}' ";
     ?>
 
 <?php
-
+        // Elastic email //
 
  if(isset($_POST["import"])){
 $url = 'https://api.elasticemail.com/v2/email/send';
@@ -120,6 +122,3 @@ catch(Exception $ex){
 }
 ?>
 
-<!-- 
-     <div id="loading"></div>
-   <script src="main.js"></script>  -->

@@ -2,9 +2,9 @@
 session_start();
 require("config.php");
 
-$full_name = $_POST['full_name'];
-$email = $_POST['email'];
-$password = $_POST['password'];
+$full_name = mysqli_real_escape_string($conn,$_POST['full_name']);
+$email = mysqli_real_escape_string($conn,$_POST['email']);
+$password = mysqli_real_escape_string($conn,$_POST['password']);
 $password = sha1($password);
 
 
